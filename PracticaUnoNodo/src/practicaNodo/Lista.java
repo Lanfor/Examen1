@@ -37,8 +37,45 @@ public class Lista
         }
     }
     
+    public Nodo devolverPosicion (int posicion)
+    {
+        Nodo indice=null;
+        int i;
+        if(posicion < 0)//Posicion ha de ser mayor que 0
+        {
+            return  null;
+        }
+        
+        indice=primero;
+        
+        for (i=1; (i  < posicion) && (indice != null) ; i ++) 
+        {
+            indice=indice.enlace;
+        }
+        
+        return indice;
+    }
     
-    
+    public  void eliminar(int entrada)
+    {
+        Nodo actual, anterior;
+        boolean encontrado;
+        //Inicializa los punteros
+        actual=primero;
+        anterior=null;
+        encontrado=false;
+        //Busqueda del nodo y del anterior
+        while((actual!=null) && (!encontrado))
+        {
+            encontrado=(actual.dato==entrada);
+             //Con objetos: actual.dato.equals(entrada)
+             if(!encontrado)
+             {
+                 anterior=actual;
+                 actual=actual.enlace;
+             }
+        }
+    }
     
     
     

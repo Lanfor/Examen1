@@ -35,6 +35,8 @@ public class ListaAleatoria
         //Recorre la lista para escribir sus elementos
         System.out.println("Elementos de la lista al azar");
         lista.visualizar();
+        System.out.println("En la posicion 3 está: ");
+        System.out.println(lista.devolverPosicion(3).dato);
         
     }
 }
