@@ -5,20 +5,21 @@ public class Lista
 {
     protected Nodo primero;
     Nodo nuevo;
-
+    //int tamano;   ---------De YouTube------------
     public Lista() 
     {
         this.primero = null;
+        //tamano=0; ---------De YouTube------------
     }
     
     public Lista insertarCabezaLista(int x)
     {
         nuevo=new Nodo(x);
         
-        nuevo.enlace=primero;
+        nuevo.setEnlace(primero);
         
         primero=nuevo;
-        
+        //tamano++;     ---------De YouTube------------
         return this;
     }
     
@@ -37,9 +38,50 @@ public class Lista
         }
     }
     
+    /*
+    public int getTamano()
+    {
+        ---------De YouTube------------
+        return tamano;
+    }
+    
+    public Tipo obtenerValor(int posicion)
+    {   
+        ---------De YouTube------------
+    
+        int contador=0;
+    
+        if(posicion < 0)//Posicion ha de ser mayor que 0
+        {
+            return  null;
+        }
+        
+        Nodo temporal= primero;
+        
+        whie(contador < posicion)
+        {
+              temporal=temporal.enlace
+        }
+    
+        return temporal;
+    }
+    
+    public int devolverPosicion(Objet entrada)
+    {
+        Nodo temporal=primero;
+        int pos=0;
+        while(entrada != temporal)
+        {
+            pos++;
+            temporal=temporal.enlace;
+        }
+        return posicion;
+    }
+    */
     public Nodo devolverPosicion (int posicion)
     {
-        Nodo indice=null;
+        Nodo indice;
+        
         int i;
         if(posicion < 0)//Posicion ha de ser mayor que 0
         {
@@ -75,6 +117,8 @@ public class Lista
                  actual=actual.enlace;
              }
         }
+        
+        
     }
     
     
