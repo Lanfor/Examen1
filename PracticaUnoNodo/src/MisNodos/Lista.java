@@ -23,15 +23,6 @@ public class Lista
         tamano=0; //---------De YouTube------------
     }
     
-    public void addCabeza(Persona x)
-    {
-        nuevo=new Nodo(x);
-        
-        nuevo.setEnlace(primero);
-        
-        primero=nuevo;
-        tamano++;
-    }
     public void add(Persona x)
     {
         nuevo=new Nodo(x);
@@ -78,26 +69,6 @@ public class Lista
     {
      //---------De YouTube------------//
         return tamano;
-    }
-    
-    public Nodo devolverPosicion (int posicion)
-    {
-        Nodo indice;
-        
-        int i;
-        if(posicion < 0)//Posicion ha de ser mayor que 0
-        {
-            return  null;
-        }
-        
-        indice=primero;
-        
-        for (i=1; (i  <= posicion) && (indice != null) ; i ++) 
-        {
-            indice=indice.enlace;
-        }
-        
-        return indice;
     }
 
     
