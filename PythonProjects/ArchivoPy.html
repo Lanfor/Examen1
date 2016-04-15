@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 
-<html lang="es">
-    <head> 
-        <title>Investigacion Python 2016</title>
+<html lang="es"> <!-- Para presentar el formulario en languaje español -->
+    <head> <!-- Cabeza del formulario -->
+        <title>Investigacion Python 2016</title> <!-- Titulo en la ventana de la pagina -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <python lang="python" src="C:\Users\Lanfor.LanforPORT\Documents\NetBeansProjects\tarea001\PythonProjects\Receptor.py" ></python>
     </head>
-    <body>
+    <body> <!-- Inicio del cuerpo del formulario -->
         <div>
-            <h1>Formulario </h1>
-            <form class="Contact_for">
-                <ul>
-                    <li><label for="codigo">Código:</label><input type="text" placeholder="001" required=""></li>
-                    <li><label for="name">Nombre:</label><input type="text" placeholder="Piratas del Caribe" required=""></li>
-                    <li><label for="genero">Genero:</label><input type="text" placeholder="Acción" required=""></li>
-                    <li><button class="submit" type="submit">Agregar</button></li>
-                    <li><button class="submit" type="submit">Eliminar</button></li>
-                    <li><button class="submit" type="submit">Buscar</button></li>
-                    <li><button class="submit" type="submit">Salir</button></li>
-                </ul>
+            
+            <center> <h1>Registro de peliculas </h1> </center> <!-- Titulo del formulario centrado -->
+            <form action="C:\Users\Lanfor.LanforPORT\Documents\NetBeansProjects\tarea001\PythonProjects\Receptor.py" method="get">
+                <center>
+                <label for="txt_Codigo">Código:</label><input name="txt_Codigo" type="text" placeholder="001" required=""><br>
+                <label for="txt_Nombre">Nombre:</label><input name="txt_Nombre" type="text" placeholder="Piratas del Caribe" required=""><br>
+                <label for="txt_Genero">Genero:</label><input name="txt_Genero" type="text" placeholder="Acción" required=""><br>
+                <input type="submit" value="Agregar:" name="btn_Agregar" />
+                <input type="button" value="Eliminar" name="btn_Eliminar">
+                <input type="button" value="Consultar" name="btn_Consultar">
+                <input type="button" value="Salir" name="btn_Sali">
+                <input type="reset" value="Limpiar" name="btn_Limpiar" />
+                </center>
+                    <!--Creacion de todos los elementos del formulario para el registro de los peliculas -->
+                
             </form>
-        </div>
+        </div> 
         
-    </body>
+    </body><!-- Final del cuerpo -->
 </html>
